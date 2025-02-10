@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlong</title>
+
+
+</head>
+<body>
+    <div id="display"></div>
+    <button onclick="knapp1()" style="height: 100px; width: 30px;border-radius: 100px;background-color: rgb(25, 216, 25);">2</button>
+    <button onclick="knapp2()" style="height: 100px; width: 30px;border-radius: 100px;background-color: aqua;">3</button>
+    <button onclick="knapp3()" style="height: 100px; width: 30px;border-radius: 100px;background-color: red;">9</button>
+    <div id="text"></div>
+<script>
+let nummer=0;
+let trykkAntall =0;
+
+function knapp1(){
+    nummer=nummer+2
+document.getElementById('display').innerHTML=nummer;
+text();
+trykkAntall++;
+}
+
+ function knapp2(){
+nummer=nummer+3
+document.getElementById('display').innerHTML=nummer;
+text();
+trykkAntall++;
+}
+
+
+function knapp3(){
+nummer=nummer+9
+document.getElementById('display').innerHTML=nummer;
+text();
+trykkAntall++;
+}
+ 
+function text(){
+if(nummer==55){
+document.getElementById('text').innerHTML=`Winner! Du trykket på Knappene ${trykkAntall} Ganger`
+}else if (nummer > 55){
+    document.getElementById('text').innerHTML=`Game Over! Du trykket på Knappene ${trykkAntall} Ganger`
+    trykkAntall++;
+}
+}
+
+
+</script>
+</body>
+</html>
